@@ -16,10 +16,11 @@
     "start:p:react": "react-scripts start",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
     "format": "prettier --write src/**/*.{js,ts,jsx,tsx,scss,css,json}",
+    "format-and-lint": "npm run format && npm run lint -- --fix",
     "build": "run-s build:** -l",
     "build:a:tailwind": "cross-env NODE_ENV=production npm run start:tailwind",
-    "build:b:react": "react-scripts build",
-    "build:format:lint": "npm run format && npm run lint -- --fix",
+    "build:b:lint": "npm run format-and-lint",
+    "build:c:react": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "check:types": "tsc"
@@ -36,7 +37,7 @@
     }
   },
   "lint-staged": {
-    "*": "prettier --write && npm run lint -- --fix"
+    "*": "prettier --write"
   },
   "browserslist": {
     "production": [
