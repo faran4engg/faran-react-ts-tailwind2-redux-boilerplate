@@ -1,17 +1,15 @@
-// @ts-nocheck
-
-import React, { Suspense, lazy, useState } from 'react';
+import { Suspense, lazy, useState, FC } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import routes from '../routes';
 
 import Sidebar from '../components/Sidebar';
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 import Main from './Main';
 import ThemedSuspense from '../components/ThemedSuspense';
 
 const Page404 = lazy(() => import('../pages/404'));
 
-function Layout() {
+const Layout: FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     <div
@@ -34,7 +32,7 @@ function Layout() {
                     key={i}
                     exact={true}
                     path={`/app${route.path}`}
-                    render={(props) => <route.component {...props} />}
+                    render={(props: any) => <route.component {...props} />}
                   />
                 ) : null
               )}
@@ -46,6 +44,6 @@ function Layout() {
       </div>
     </div>
   );
-}
+};
 
 export default Layout;

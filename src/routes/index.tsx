@@ -8,16 +8,16 @@ const Blank = lazy(() => import('../pages/Blank'));
 
 const routes = [
   {
-    path: '/dashboard', // the url
     component: Dashboard, // view rendered
+    path: '/dashboard', // the url
   },
   {
-    path: '/404',
     component: Page404,
+    path: '/404',
   },
   {
-    path: '/blank',
     component: Blank,
+    path: '/blank',
   },
 ];
 

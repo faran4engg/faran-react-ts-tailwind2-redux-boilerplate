@@ -1,6 +1,6 @@
 // .eslintrc
 {
-  "plugins": ["prettier", "@typescript-eslint"],
+  "plugins": ["prettier", "@typescript-eslint","sort-imports-es6-autofix", "sort-keys-fix"],
   "extends": ["airbnb-typescript", "react-app", "prettier"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -77,6 +77,10 @@
     "react/jsx-wrap-multilines": "off",
     "react/destructuring-assignment": "off",
     "react/no-array-index-key": "warn",
+    "no-duplicate-imports": ["error", { "includeExports": true }],
+    "func-style": ["error", "expression"],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "indent": ["warn", 2, { "ignoredNodes": ["TemplateLiteral"] }],
     "@typescript-eslint/comma-dangle": [
       "error",
       {
@@ -88,6 +92,16 @@
       }
 		],
 		"jsx-a11y/click-events-have-key-events": 0,
-		"jsx-a11y/no-static-element-interactions": ["off"]
+    "jsx-a11y/no-static-element-interactions": ["off"],
+    "sort-keys-fix/sort-keys-fix": "warn",
+    "sort-keys": [
+      "error",
+      "asc",
+      {
+        "caseSensitive": true,
+        "natural": false,
+        "minKeys": 2
+      }
+    ]
   }
 }

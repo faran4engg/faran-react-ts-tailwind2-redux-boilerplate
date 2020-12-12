@@ -1,19 +1,18 @@
-// @ts-nocheck
-import { useState } from 'react';
+import { useState, FC } from 'react';
+import { HeaderProps } from './types';
+import { BellIcon, MenuIcon } from '../../icons';
 
-import { BellIcon, MenuIcon } from '../icons';
-
-function Header({ handleIsSidebarOpen }) {
+const Header: FC<HeaderProps> = ({ handleIsSidebarOpen }) => {
   const [isNotificationsMenuOpen, setIsNotificationsMenuOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
 
-  function handleNotificationsClick() {
+  const handleNotificationsClick = () => {
     setIsNotificationsMenuOpen(!isNotificationsMenuOpen);
-  }
+  };
 
-  function handleProfileClick() {
+  const handleProfileClick = () => {
     setIsProfileMenuOpen(!isProfileMenuOpen);
-  }
+  };
 
   return (
     <header className="z-40 py-4 bg-white shadow-bottom dark:bg-gray-800">
@@ -72,6 +71,6 @@ function Header({ handleIsSidebarOpen }) {
       </div>
     </header>
   );
-}
+};
 
 export default Header;

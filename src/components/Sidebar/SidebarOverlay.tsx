@@ -1,5 +1,5 @@
-// @ts-nocheck
 import { FC } from 'react';
+import { SidebarOverlayProps } from './types';
 
 const SidebarOverlay: FC<SidebarOverlayProps> = ({
   isSidebarOpen,

@@ -1,17 +1,14 @@
-import CTA from '../components/CTA';
-
+import CTA from '../components/CTA/CTA';
 import PageTitle from '../components/Typography/PageTitle';
 
-function Dashboard() {
-  return (
-    <>
-      <PageTitle>Dashboard</PageTitle>
+const Dashboard = () => (
+  <>
+    <PageTitle>Dashboard</PageTitle>
 
-      <CTA />
+    <CTA />
 
-      <div className="grid gap-6 mb-8 md:grid-cols-2">Home</div>
-    </>
-  );
-}
+    <div className="grid gap-6 mb-8 md:grid-cols-2">Home</div>
+  </>
+);
 
 export default Dashboard;
