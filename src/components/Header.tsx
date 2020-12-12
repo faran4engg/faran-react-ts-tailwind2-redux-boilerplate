@@ -1,8 +1,9 @@
+// @ts-nocheck
 import { useState } from 'react';
 
-import { SearchIcon, BellIcon, MenuIcon } from '../icons';
+import { BellIcon, MenuIcon } from '../icons';
 
-function Header() {
+function Header({ handleIsSidebarOpen }) {
   const [isNotificationsMenuOpen, setIsNotificationsMenuOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
 
@@ -22,14 +23,16 @@ function Header() {
           className="p-1 mr-5 -ml-1 rounded-md lg:hidden focus:outline-none focus:shadow-outline-purple"
           aria-label="Menu"
         >
-          <MenuIcon className="w-6 h-6" aria-hidden="true" />
+          <MenuIcon
+            onClick={() => handleIsSidebarOpen(true)}
+            className="w-6 h-6"
+            aria-hidden="true"
+          />
         </button>
         {/* <!-- Search input --> */}
         <div className="flex justify-center flex-1 lg:mr-32">
           <div className="relative w-full max-w-xl mr-6 focus-within:text-purple-500">
-            <div className="absolute inset-y-0 flex items-center pl-2">
-              <SearchIcon className="w-4 h-4" aria-hidden="true" />
-            </div>
+            &nbsp;
           </div>
         </div>
         <ul className="flex items-center flex-shrink-0 space-x-6">
