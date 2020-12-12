@@ -14,16 +14,16 @@
     "start": "npm-run-all start:tw -l -p start:p:*",
     "start:tw": "postcss ./src/assets/css/tailwind.src.css -o ./src/assets/css/tailwind.css",
     "start:p:w-tw": "onchange 'tailwind.config.js' 'src/**/*.css' -e './src/assets/css/tailwind.css' -- npm run start:tw",
-    "start:p:react": "react-scripts start",
+    "start:p:react": "react-app-rewired start",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
     "format": "prettier --write src/**/*.{js,ts,jsx,tsx,scss,css,json}",
     "format-and-lint": "npm run format && npm run lint -- --fix",
     "build": "run-s build:** -l",
     "build:a:tw": "cross-env NODE_ENV=production npm run start:tw",
     "build:b:lint": "npm run format-and-lint",
-    "build:c:react": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "build:c:react": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
     "check:types": "tsc"
   },
   "eslintConfig": {
@@ -90,6 +90,8 @@
     "prettier": "2.2.1",
     "prettier-eslint": "12.0.0",
     "prettier-eslint-cli": "5.0.0",
+    "react-app-rewire-alias": "^0.1.9",
+    "react-app-rewired": "^2.1.8",
     "tailwindcss": "^2.0.2"
   }
 }

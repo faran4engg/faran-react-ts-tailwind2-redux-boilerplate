@@ -1,4 +1,4 @@
-import { SectionTitle, PageTitle } from '../components/typography';
+import { SectionTitle, PageTitle } from '@components/typography';
 
 const Home = () => (
   <>

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { NavLink, Route } from 'react-router-dom';
-import { HomeIcon } from '../../../assets/icons';
-import routes from '../../../routes/sidebar';
+import { HomeIcon } from '@assets/icons';
+import routes from '@router/sidebar';
 
 const SidebarContent: FC = () => (
   <div className="py-4 text-gray-500 dark:text-gray-400">
