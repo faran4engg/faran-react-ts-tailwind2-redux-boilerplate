@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import './assets/css/tailwind.css';
+import '@assets/css/tailwind.css';
+import { SuspenseLoader } from '@components/loader';
 import App from './App';
-import { SuspenseLoader } from './components/loader';
 
 // import * as serviceWorker from './serviceWorker';
 

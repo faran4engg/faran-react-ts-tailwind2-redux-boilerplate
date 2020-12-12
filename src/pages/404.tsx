@@ -1,4 +1,4 @@
-import { ForbiddenIcon } from '../assets/icons';
+import { ForbiddenIcon } from '@assets/icons';
 
 const Page404 = () => (
   <div className="flex flex-col items-center">

@@ -1,10 +1,8 @@
 import { Suspense, lazy, useState, FC } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import routes from '../../routes';
-
-import { NavSidebar, Content, Header } from '../../components/layout';
-
-import { SuspenseLoader } from '../../components/loader';
+import routes from '@router/routes';
+import { SuspenseLoader } from '@components/loader';
+import { NavSidebar, Content, Header } from '@components/layout';
 
 const Page404 = lazy(() => import('../../pages/404'));
 
