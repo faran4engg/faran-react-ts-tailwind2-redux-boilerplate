@@ -1,12 +1,17 @@
+// @ts-nocheck
+
 import React from 'react';
 import DesktopSidebar from './DesktopSidebar';
-import MobileSidebar from './MobileSidebar';
+import SidebarOverlay from './SidebarOverlay';
 
-function Sidebar() {
+function Sidebar({ isSidebarOpen, handleIsSidebarOpen }) {
   return (
     <>
-      <DesktopSidebar />
-      <MobileSidebar />
+      <SidebarOverlay
+        isSidebarOpen={isSidebarOpen}
+        handleIsSidebarOpen={handleIsSidebarOpen}
+      />
+      <DesktopSidebar isSidebarOpen={isSidebarOpen} />
     </>
   );
 }

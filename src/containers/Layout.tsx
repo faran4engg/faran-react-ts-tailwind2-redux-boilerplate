@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import routes from '../routes';
 
@@ -12,15 +12,19 @@ import ThemedSuspense from '../components/ThemedSuspense';
 const Page404 = lazy(() => import('../pages/404'));
 
 function Layout() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     <div
       className={`flex h-screen bg-gray-50 dark:bg-gray-900 
       }`}
     >
-      <Sidebar />
+      <Sidebar
+        isSidebarOpen={isSidebarOpen}
+        handleIsSidebarOpen={setIsSidebarOpen}
+      />
 
       <div className="flex flex-col flex-1 w-full">
-        <Header />
+        <Header handleIsSidebarOpen={setIsSidebarOpen} />
         <Main>
           <Suspense fallback={<ThemedSuspense />}>
             <Switch>
