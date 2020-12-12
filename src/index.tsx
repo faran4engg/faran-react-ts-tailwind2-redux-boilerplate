@@ -2,12 +2,12 @@ import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './assets/css/tailwind.css';
 import App from './App';
-import ThemedSuspense from './components/ThemedSuspense';
+import { SuspenseLoader } from './components/loader';
 
 // import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Suspense fallback={<ThemedSuspense />}>
+  <Suspense fallback={<SuspenseLoader />}>
     <App />
   </Suspense>,
   document.getElementById('root')

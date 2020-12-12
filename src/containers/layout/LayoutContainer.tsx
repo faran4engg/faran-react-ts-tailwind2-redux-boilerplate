@@ -1,13 +1,12 @@
 import { Suspense, lazy, useState, FC } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import routes from '../routes';
+import routes from '../../routes';
 
-import Sidebar from '../components/Sidebar';
-import Header from '../components/Header/Header';
-import Main from './Main';
-import ThemedSuspense from '../components/ThemedSuspense';
+import { NavSidebar, Content, Header } from '../../components/layout';
 
-const Page404 = lazy(() => import('../pages/404'));
+import { SuspenseLoader } from '../../components/loader';
+
+const Page404 = lazy(() => import('../../pages/404'));
 
 const Layout: FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -16,15 +15,15 @@ const Layout: FC = () => {
       className={`flex h-screen bg-gray-50 dark:bg-gray-900 
       }`}
     >
-      <Sidebar
+      <NavSidebar
         isSidebarOpen={isSidebarOpen}
         handleIsSidebarOpen={setIsSidebarOpen}
       />
 
       <div className="flex flex-col flex-1 w-full">
         <Header handleIsSidebarOpen={setIsSidebarOpen} />
-        <Main>
-          <Suspense fallback={<ThemedSuspense />}>
+        <Content>
+          <Suspense fallback={<SuspenseLoader />}>
             <Switch>
               {routes.map((route) =>
                 route.component ? (
@@ -37,11 +36,11 @@ const Layout: FC = () => {
                   />
                 ) : null
               )}
-              <Redirect exact from="/app" to="/app/dashboard" />
+              <Redirect exact from="/app" to="/app/home" />
               <Route component={Page404} />
             </Switch>
           </Suspense>
-        </Main>
+        </Content>
       </div>
     </div>
   );

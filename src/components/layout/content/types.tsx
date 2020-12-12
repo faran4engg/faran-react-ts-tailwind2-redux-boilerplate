@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
 
-export interface MainProps {
+export interface ContentProps {
   children: ReactNode;
 }
