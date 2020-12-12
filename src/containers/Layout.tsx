@@ -26,12 +26,13 @@ const Layout: FC = () => {
         <Main>
           <Suspense fallback={<ThemedSuspense />}>
             <Switch>
-              {routes.map((route, i) =>
+              {routes.map((route) =>
                 route.component ? (
                   <Route
-                    key={i}
+                    key={route.path}
                     exact={true}
                     path={`/app${route.path}`}
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     render={(props: any) => <route.component {...props} />}
                   />
                 ) : null
