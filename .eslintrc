@@ -30,7 +30,7 @@
       }
     ],
     "@typescript-eslint/no-explicit-any": [
-      "error",
+      "warn",
       {
         "ignoreRestArgs": true
       }
@@ -53,6 +53,7 @@
     "react/jsx-key": "error",
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
+    "react/button-has-type": "off",
     "import/no-extraneous-dependencies": [
       "error",
       {
@@ -62,6 +63,7 @@
           "**/*.test.ts",
           "**/*.test.tsx",
           "src/setupTests.ts",
+          "src/serviceWorker.ts",
           "src/tests/**/*"
         ]
       }
@@ -74,6 +76,7 @@
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-wrap-multilines": "off",
     "react/destructuring-assignment": "off",
+    "react/no-array-index-key": "warn",
     "@typescript-eslint/comma-dangle": [
       "error",
       {
