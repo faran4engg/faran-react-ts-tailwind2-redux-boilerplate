@@ -1,4 +1,4 @@
-import { Suspense, lazy, useState, FC } from 'react';
+import { Suspense, lazy, useState, FC, useEffect } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import routes from '@router/routes';
 import { SuspenseLoader } from '@components/loader';
@@ -8,9 +8,15 @@ const Page404 = lazy(() => import('../../pages/404'));
 
 const Layout: FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    if (!localStorage.twTheme) return;
+    document.querySelector('html')!.classList.add(localStorage.twTheme);
+  }, []);
+
   return (
     <div
-      className={`flex h-screen bg-gray-50 dark:bg-gray-900 
+      className={`flex h-screen bg-gray-50 dark:bg-gray-900 text-gray-500 dark:text-gray-200
       }`}
     >
       <NavSidebar
