@@ -1,6 +1,6 @@
 import { useState, FC } from 'react';
 import { HeaderProps } from './types';
-import { BellIcon, MenuIcon } from '../../icons';
+import { BellIcon, MenuIcon } from '../../../assets/icons';
 
 const Header: FC<HeaderProps> = ({ handleIsSidebarOpen }) => {
   const [isNotificationsMenuOpen, setIsNotificationsMenuOpen] = useState(false);

@@ -10,7 +10,7 @@ const routes = [
     exact: true,
     icon: 'HomeIcon', // the component being exported from icons/index.js
     name: 'Dashboard', // name that appear in Sidebar
-    path: '/app/dashboard', // the url
+    path: '/app/home', // the url
   },
 ];
 
