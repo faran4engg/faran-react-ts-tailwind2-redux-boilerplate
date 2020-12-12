@@ -15,7 +15,7 @@ const SidebarContent: FC = () => (
             exact
             to={route.path}
             className="inline-flex items-center w-full text-sm font-semibold transition-colors
-						 duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+						 duration-150 hover:text-purple-400 dark:hover:text-purple-300"
             activeClassName="text-purple-500 dark:text-purple-400"
           >
             <Route path={route.path} exact={route.exact}>
