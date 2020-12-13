@@ -2,11 +2,14 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@apis/*": ["./src/apis/*"],
       "@assets/*": ["./src/assets/*"],
+      "@axios/*": ["./src/axios/*"],
       "@components/*": ["./src/components/*"],
       "@containers/*": ["./src/containers/*"],
       "@pages/*": ["./src/pages/*"],
-      "@router/*": ["./src/router/*"]
+      "@router/*": ["./src/router/*"],
+      "@store/*": ["./src/store/*"]
     }
   }
 }
