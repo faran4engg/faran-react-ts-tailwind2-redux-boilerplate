@@ -37,7 +37,9 @@
       {
         "ignoreRestArgs": true
       }
-    ],
+		],
+		"max-params": ["error", 3],
+		"max-lines": ["error", {"max":120,"skipBlankLines": true, "skipComments": true}],
     "max-len": [
       "warn",
       {
