@@ -80,16 +80,7 @@
     "no-duplicate-imports": ["error", { "includeExports": true }],
     "func-style": ["error", "expression"],
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
-    "@typescript-eslint/comma-dangle": [
-      "error",
-      {
-        // "arrays": "only-multiline",
-        "objects": "only-multiline",
-        "imports": "only-multiline",
-        "exports": "only-multiline",
-        "functions": "never"
-      }
-		],
+    "@typescript-eslint/comma-dangle": ["off"],
 		"jsx-a11y/click-events-have-key-events": 0,
     "jsx-a11y/no-static-element-interactions": ["off"],
     "sort-keys-fix/sort-keys-fix": "warn",
