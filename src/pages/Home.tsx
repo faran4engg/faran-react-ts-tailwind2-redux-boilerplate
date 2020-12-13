@@ -1,10 +1,12 @@
+import { TodoCard } from '@components/todo-card';
 import { SectionTitle, PageTitle } from '@components/typography';
+import TodosContainer from '@containers/todos/TodosContainer';
 
 const Home = () => (
   <>
     <PageTitle>Home Page Title</PageTitle>
-    <h1>Almost</h1>
-    <SectionTitle>Example Section Title</SectionTitle>
+    <SectionTitle>With Todos Render Prop</SectionTitle>
+    <TodosContainer>{(props) => <TodoCard {...props} />}</TodosContainer>
   </>
 );
 

@@ -80,7 +80,6 @@
     "no-duplicate-imports": ["error", { "includeExports": true }],
     "func-style": ["error", "expression"],
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
-    "indent": ["warn", 2, { "ignoredNodes": ["TemplateLiteral"] }],
     "@typescript-eslint/comma-dangle": [
       "error",
       {
