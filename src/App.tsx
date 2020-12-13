@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 const LayoutContainer = lazy(
-  () => import('@containers/layout/LayoutContainer')
+  () => import('@domains/Layout/containers/LayoutContainer')
 );
 
 const App = () => (

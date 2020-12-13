@@ -1,6 +1,6 @@
-import { TodoCard } from '@components/todo-card';
-import { SectionTitle, PageTitle } from '@components/typography';
-import TodosContainer from '@containers/todos/TodosContainer';
+import { TodoCard } from '@domains/Todos/components/todo-card';
+import { SectionTitle, PageTitle } from '@domains/Common/components/typography';
+import { TodosContainer } from '@domains/Todos/containers';
 
 const Home = () => (
   <>

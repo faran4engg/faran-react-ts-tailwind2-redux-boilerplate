@@ -5,8 +5,7 @@
       "@apis/*": ["./src/apis/*"],
       "@assets/*": ["./src/assets/*"],
       "@axios/*": ["./src/axios/*"],
-      "@components/*": ["./src/components/*"],
-      "@containers/*": ["./src/containers/*"],
+      "@domains/*": ["./src/domains/*"],
       "@pages/*": ["./src/pages/*"],
       "@router/*": ["./src/router/*"],
       "@store/*": ["./src/store/*"]

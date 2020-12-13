@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { SuspenseLoader } from '@components/loader';
+import { SuspenseLoader } from '@domains/Common/components/loader';
 import { appStore } from '@store/appStore';
 import '@assets/css/tailwind.css';
 import App from './App';

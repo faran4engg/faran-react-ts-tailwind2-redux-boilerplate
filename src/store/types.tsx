@@ -1,5 +1,5 @@
 import { createSelectorHook } from 'react-redux';
-import { TodosState } from '@containers/todos/types';
+import { TodosState } from '@domains/Todos/containers/types';
 
 export type RootState = {
   todos: TodosState;
