@@ -23,8 +23,8 @@
     "format-and-lint": "npm run format && npm run lint -- --fix",
     "build": "run-s build:** -l",
     "build:a:tw": "cross-env NODE_ENV=production npm run start:tw",
-    "build:b:lint": "npm run format-and-lint",
-    "build:c:react": "react-app-rewired build",
+    "build:b:react": "react-app-rewired build",
+    "build:c:lint": "npm run format-and-lint",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "check:types": "tsc"
@@ -41,7 +41,9 @@
     }
   },
   "lint-staged": {
-    "*": "prettier --write"
+    "*": [
+      "prettier --write"
+    ]
   },
   "browserslist": {
     "production": [
