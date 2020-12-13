@@ -83,7 +83,7 @@
     "@typescript-eslint/comma-dangle": [
       "error",
       {
-        "arrays": "only-multiline",
+        // "arrays": "only-multiline",
         "objects": "only-multiline",
         "imports": "only-multiline",
         "exports": "only-multiline",
