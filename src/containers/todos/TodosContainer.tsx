@@ -23,7 +23,6 @@ const TodosContainer: FC<OwnProps & RenderProps> = ({ children }) => {
   const getTodos = useCallback(async () => {
     try {
       const { data } = await getAllTodos();
-      console.log({ data });
       dispatch(fetchTodosSuccess(data));
     } catch (error) {
       dispatch(fetchTodosFailed());
@@ -34,7 +33,7 @@ const TodosContainer: FC<OwnProps & RenderProps> = ({ children }) => {
     dispatch(fetchTodosStart());
     const timeoutID = setTimeout(() => {
       getTodos(); // simulating delay jsut to show loaders :)
-    }, 5000);
+    }, 2000);
     return () => {
       clearTimeout(timeoutID);
     };
