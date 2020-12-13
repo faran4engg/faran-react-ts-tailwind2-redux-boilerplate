@@ -1,10 +1,10 @@
 import { Suspense, lazy, useState, FC, useEffect } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import routes from '@router/routes';
-import { SuspenseLoader } from '@components/loader';
-import { NavSidebar, Content, Header } from '@components/layout';
+import { SuspenseLoader } from '@domains/Common/components/loader';
+import { NavSidebar, Content, Header } from '@domains/Layout/components';
 
-const Page404 = lazy(() => import('../../pages/404'));
+const Page404 = lazy(() => import('@pages/404'));
 
 const Layout: FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
